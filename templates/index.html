@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Prova Prática - Python</title>
+    </head>
+    <body>
+
+        <a href='{{url_for("add")}}'><button>Adicionar Cliente</button> </a>
+
+        {% for cliente in clientes %}
+            <ul>
+                <li>{{cliente.nome}}</li>
+                <li>{{cliente.cnpj}}</li>
+                <li>{{cliente.razao_social}}</li>
+                <li>{{cliente.data_inclusao}}</li>
+            </ul>
+            <a href="{{url_for('edit', codigo=cliente.codigo)}}">Editar</a>
+            <a href="{{url_for('delete', codigo=cliente.codigo)}}">Exluir</a>
+        {%endfor%}
+        
+        <h3>Buscar Clientes</h3>
+        <p>Digite o codigo do cliente para realizar a busca.</p>
+        <form action='{{url_for("view")}}' method="GET"> 
+            <input type='text' name='codigo' id='codigo' placeholder="codigo">
+            <button type="submit">Buscar Cliente</button>
+        </form>
+        
+
+    </body>
+</html>

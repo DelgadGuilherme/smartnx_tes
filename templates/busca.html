@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Prova Prática - Python</title>
+    </head>
+    <body>
+
+            <ul>
+                <li>{{cliente.nome}}</li>
+                <li>{{cliente.cnpj}}</li>
+                <li>{{cliente.razao_social}}</li>
+                <li>{{cliente.data_inclusao}}</li>
+            </ul>
+            <a href="/edit/{{cliente.codigo}}">Editar</a>
+            <a href="/delete/{{cliente.codigo}}">Exluir</a>
+        
+
+            <a href="{{url_for('index')}}"><button>Voltar Menu inicial</button></a>
+    </body>
+</html>

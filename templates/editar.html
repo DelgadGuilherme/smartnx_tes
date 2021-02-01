@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Editar Cliente</title>
+    </head>
+    <body>
+
+        <form action="{{url_for('edit', codigo=cliente.codigo)}}" method="post"> 
+            <input type='text' name='nome' id='nome' placeholder="nome" value="{{cliente.nome}}">
+            <input type='text' name='cnpj' id='cnpj' placeholder="cnpj" value="{{cliente.cnpj}}">
+            <input type='text' name='razao_social' id='razao_social' placeholder="razao_social" value="{{cliente.razao_social}}">
+            <input type='text' name='data_inclusao' id='data_inclusao' placeholder="data_inclusao" value="{{cliente.data_inclusao}}">
+            <button type="submit">Salvar cliente</button>
+        </form>
+        
+    </body>
+</html>
